@@ -6,6 +6,7 @@ body {
   font-family: sans-serif;
   margin: 20px;
   padding: 0;
+  background-color: #f8e6f7;
 }
 
 h1 {
@@ -58,27 +59,36 @@ body {
 
 .square {
   background: #fff;
-  border: 1px solid #999;
   float: left;
+  border: 2px solid #d19fd9; /* Light pink border */
   font-size: 24px;
   font-weight: bold;
   line-height: 34px;
-  height: 34px;
-  margin-right: -1px;
-  margin-top: -1px;
+  height: 60px; /* Increased size */
+  width: 60px; /* Increased size */
+  margin-right: -2px; /* Adjust margins */
+  margin-top: -2px;
   padding: 0;
   text-align: center;
-  width: 34px;
+  transition: background-color 0.3s, transform 0.2s; /* Smooth transition */
+}
+
+.square:hover {
+  background-color: #ffd8e3; /* Soft pink hover */
+  transform: scale(1.1);
 }
 
 .board-row:after {
   clear: both;
-  content: '';
+  content: "";
   display: table;
 }
 
 .status {
   margin-bottom: 10px;
+  font-size: 20px;
+  font-weight: bold;
+  color: #d19fd9; /* Light pink text */
 }
 .game {
   display: flex;
@@ -87,4 +97,19 @@ body {
 
 .game-info {
   margin-left: 20px;
+}
+/* Game History Buttons */
+.game-info button {
+  font-size: 16px;
+  background-color: #ff77cc; /* Bold pink button */
+  color: white;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.game-info button:hover {
+  background-color: #e65bb8; /* Darker pink on hover */
 }
